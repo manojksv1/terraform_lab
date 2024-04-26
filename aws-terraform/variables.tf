@@ -22,4 +22,3 @@ variable "private-ip-cidr" {
 variable "db-ip-cidr" {
   default = ["10.0.6.0/24", "10.0.7.0/24", "10.0.8.0/24"]
 }
-#
