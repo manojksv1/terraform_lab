@@ -8,6 +8,7 @@ data "aws_ami" "nat_instances" {
 }
 
 resource "aws_instance" "nat_server" {
+  count = var.nat_server_status ? 1:0
   ami           = data.aws_ami.nat_instances.id
   instance_type = var.nat-server-instance-type
   tags = {

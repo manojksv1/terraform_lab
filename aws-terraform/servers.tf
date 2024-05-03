@@ -1,24 +1,24 @@
 # resource "aws_instance" "jump-server" {
-#   count = 3
+#   count                  = 3
 #   ami                    = data.aws_ami.ami.id
 #   instance_type          = var.jump-server-instance_type
 #   subnet_id              = module.vpc.public-subnet[0]
 #   key_name               = var.key_name
 #   vpc_security_group_ids = [aws_security_group.ssh-sg.id]
 #   tags = {
-#     Name = "jump-server ${count.index+1}"
+#     Name = "jump-server ${count.index + 1}"
 #   }
 # }
 
 # resource "aws_instance" "private-server" {
-#   count = 3
+#   count                  = 3
 #   ami                    = data.aws_ami.ami.id
 #   instance_type          = var.jump-server-instance_type
 #   subnet_id              = module.vpc.private-subnet[1]
 #   key_name               = var.key_name
 #   vpc_security_group_ids = [aws_security_group.ssh-sg.id]
 #   tags = {
-#     Name = "private-server ${count.index+1}"
+#     Name = "private-server ${count.index + 1}"
 #   }
 # }
 

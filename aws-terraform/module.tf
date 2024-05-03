@@ -10,4 +10,5 @@ module "vpc" {
   public-cidr            = var.public-ip-cidr
   private-cidr           = var.private-ip-cidr
   db-cidr                = var.db-ip-cidr
+  nat_server_status      = var.nat_server_status
 }

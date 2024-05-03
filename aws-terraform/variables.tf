@@ -4,7 +4,7 @@ variable "aws-region" {
 }
 
 variable "key_name" {
-  default = "ksv-singapur"#"ksv"
+  default = "ksv-singapur" #"ksv"
 }
 
 variable "jump-server-instance_type" {
@@ -21,4 +21,9 @@ variable "private-ip-cidr" {
 
 variable "db-ip-cidr" {
   default = ["10.0.6.0/24", "10.0.7.0/24", "10.0.8.0/24"]
+}
+
+variable "nat_server_status" {
+  type    = bool
+  default = false
 }

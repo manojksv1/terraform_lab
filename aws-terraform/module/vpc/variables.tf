@@ -49,3 +49,9 @@ variable "nat-server-instance-type" {
   description = "nat server instnace"
   default     = "t2.micro"
 }
+
+variable "nat_server_status" {
+  description = "If you want to add nat server or not"
+  type = bool
+  default = false
+}
